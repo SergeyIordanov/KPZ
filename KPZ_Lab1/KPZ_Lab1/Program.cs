@@ -13,15 +13,16 @@ namespace KPZ_Lab1
         {
             string input, output = "";           
 
-            Translator translator = new Translator();
             FileAssistant fileAssistant = new FileAssistant("input.txt");
             input = fileAssistant.GetText();
             input = input.Replace(" ", String.Empty);
+            input = input.Replace("\n", String.Empty);
+            input = input.Replace("\t", String.Empty);
+            input = input.Replace("\r", String.Empty);
             Console.WriteLine("Input text: \n");
             Console.WriteLine(input + "\n\n");
 
-            output = translator.Translate(input);
-            //Here translation from string input to string output
+            output = Translator.Translate(input);
 
             fileAssistant.ChangePath("output.txt");
             fileAssistant.WriteText(output);
