@@ -1,0 +1,15 @@
+c:\users\serge\Documents\Visual Studio 2015\Projects\KPZ_Lab1\KPZ_Lab1\bin\Debug\KPZ_Lab1.exe.config
+c:\users\serge\Documents\Visual Studio 2015\Projects\KPZ_Lab1\KPZ_Lab1\bin\Debug\KPZ_Lab1.exe
+c:\users\serge\Documents\Visual Studio 2015\Projects\KPZ_Lab1\KPZ_Lab1\bin\Debug\KPZ_Lab1.pdb
+c:\users\serge\Documents\Visual Studio 2015\Projects\KPZ_Lab1\KPZ_Lab1\obj\Debug\KPZ_Lab1.csprojResolveAssemblyReference.cache
+c:\users\serge\Documents\Visual Studio 2015\Projects\KPZ_Lab1\KPZ_Lab1\obj\Debug\KPZ_Lab1.exe
+c:\users\serge\Documents\Visual Studio 2015\Projects\KPZ_Lab1\KPZ_Lab1\obj\Debug\KPZ_Lab1.pdb
+C:\1Sergey\4ProjectsInGit\University\KPZ\KPZ_Lab1\KPZ_Lab1\bin\Debug\KPZ_Lab1.exe.config
+C:\1Sergey\4ProjectsInGit\University\KPZ\KPZ_Lab1\KPZ_Lab1\obj\Debug\KPZ_Lab1.exe
+C:\1Sergey\4ProjectsInGit\University\KPZ\KPZ_Lab1\KPZ_Lab1\obj\Debug\KPZ_Lab1.pdb
+C:\1Sergey\4ProjectsInGit\University\KPZ\KPZ_Lab1\KPZ_Lab1\bin\Debug\KPZ_Lab1.exe
+C:\1Sergey\4ProjectsInGit\University\KPZ\KPZ_Lab1\KPZ_Lab1\bin\Debug\KPZ_Lab1.pdb
+C:\1Sergey\4ProjectsInGit\University\KPZ\KPZ_Lab1\KPZ_Lab1\obj\Debug\KPZ_Lab1.csprojResolveAssemblyReference.cache
+C:\1Sergey\4ProjectsInGit\KPZ\KPZ_Lab1\KPZ_Lab1\bin\Debug\KPZ_Lab1.exe.config
+C:\1Sergey\4ProjectsInGit\KPZ\KPZ_Lab1\KPZ_Lab1\obj\Debug\KPZ_Lab1.exe
+C:\1Sergey\4ProjectsInGit\KPZ\KPZ_Lab1\KPZ_Lab1\obj\Debug\KPZ_Lab1.pdb
