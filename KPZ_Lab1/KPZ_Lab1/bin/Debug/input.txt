@@ -1,4 +1,4 @@
-if(x + z / (2 - v) >= w * g) 
+if(x + z / (2 - v) > w * g) 
 	a = b / (c + (d - e)) * f;
 else 
 	a = a + b;

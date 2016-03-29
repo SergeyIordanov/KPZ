@@ -62,15 +62,17 @@ namespace KPZ_Lab1
                 if(condition.Split('<').Length > 1)
                 {
                     // <
-                    res += exTranslator.Translate(arr[0]);
-                    res += exTranslator.Translate(arr[1]);
+                    string[] arr2 = condition.Split('<');
+                    res += exTranslator.Translate(arr2[0]);
+                    res += exTranslator.Translate(arr2[1]);
                     res += "<";
                 }
                 else
                 {
                     // >
-                    res += exTranslator.Translate(arr[0]);
-                    res += exTranslator.Translate(arr[1]);
+                    string[] arr3 = condition.Split('>');
+                    res += exTranslator.Translate(arr3[0]);
+                    res += exTranslator.Translate(arr3[1]);
                     res += ">";
                 }
             }

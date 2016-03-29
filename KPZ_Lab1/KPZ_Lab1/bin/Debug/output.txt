@@ -1,1 +1,1 @@
-xz2v-/+wg*>= gotoA1 gotoA2 A1:abcde-+/f*=; gotoA3 A2:aab+=; A3:
+xz2v-/+wg*> gotoA1 gotoA2 A1:abcde-+/f*=; gotoA3 A2:aab+=; A3:
