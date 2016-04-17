@@ -12,7 +12,7 @@ namespace KPZ_Lab2.Services
         public static string Build(string expr, ListBox id, ListBox con, ListBox op, ListBox br)
         {
             if (!Validator.Validate(expr))
-                return "Invalid exprasion.";
+                return "Invalid exprassion";
             // Implementation
             return "Result here!";
         }
