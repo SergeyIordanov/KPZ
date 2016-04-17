@@ -52,6 +52,7 @@
             this.textBoxExpression.Name = "textBoxExpression";
             this.textBoxExpression.Size = new System.Drawing.Size(495, 26);
             this.textBoxExpression.TabIndex = 0;
+            this.textBoxExpression.TextChanged += new System.EventHandler(this.textBoxExpression_TextChanged);
             // 
             // labelExpression
             // 

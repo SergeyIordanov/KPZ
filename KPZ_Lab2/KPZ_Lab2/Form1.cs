@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KPZ_Lab2.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,16 @@ namespace KPZ_Lab2
         public Form1()
         {
             InitializeComponent();
+            labelError.Text = "";
+        }
+
+        private void textBoxExpression_TextChanged(object sender, EventArgs e)
+        {
+            labelError.Text = "";
+            if (!Validator.Validate(textBoxExpression.Text))
+                labelError.Text = "Invalid input";
+            textBoxResult.Text = LexemeBuilder.Build(textBoxExpression.Text, 
+                listBoxIdentifiers, listBoxConstants, listBoxOperations, listBoxBrackets);
         }
     }
 }
