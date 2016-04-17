@@ -42,6 +42,10 @@
             this.labelBrackets = new System.Windows.Forms.Label();
             this.listBoxBrackets = new System.Windows.Forms.ListBox();
             this.labelError = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxExpression
@@ -69,7 +73,7 @@
             // 
             this.labelLogo.AutoSize = true;
             this.labelLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLogo.Location = new System.Drawing.Point(394, 9);
+            this.labelLogo.Location = new System.Drawing.Point(414, 9);
             this.labelLogo.Name = "labelLogo";
             this.labelLogo.Size = new System.Drawing.Size(261, 37);
             this.labelLogo.TabIndex = 2;
@@ -111,21 +115,21 @@
             // 
             this.labelIdentifiers.AutoSize = true;
             this.labelIdentifiers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelIdentifiers.Location = new System.Drawing.Point(530, 80);
+            this.labelIdentifiers.Location = new System.Drawing.Point(536, 63);
             this.labelIdentifiers.Name = "labelIdentifiers";
-            this.labelIdentifiers.Size = new System.Drawing.Size(102, 20);
+            this.labelIdentifiers.Size = new System.Drawing.Size(117, 20);
             this.labelIdentifiers.TabIndex = 6;
-            this.labelIdentifiers.Text = "Identifiers (1)";
+            this.labelIdentifiers.Text = "Identifiers (1, x)";
             // 
             // labelConstants
             // 
             this.labelConstants.AutoSize = true;
             this.labelConstants.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelConstants.Location = new System.Drawing.Point(661, 80);
+            this.labelConstants.Location = new System.Drawing.Point(664, 63);
             this.labelConstants.Name = "labelConstants";
-            this.labelConstants.Size = new System.Drawing.Size(105, 20);
+            this.labelConstants.Size = new System.Drawing.Size(120, 20);
             this.labelConstants.TabIndex = 8;
-            this.labelConstants.Text = "Constants (2)";
+            this.labelConstants.Text = "Constants (2, x)";
             // 
             // listBoxConstants
             // 
@@ -142,11 +146,11 @@
             // 
             this.labelOperations.AutoSize = true;
             this.labelOperations.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelOperations.Location = new System.Drawing.Point(792, 80);
+            this.labelOperations.Location = new System.Drawing.Point(795, 63);
             this.labelOperations.Name = "labelOperations";
-            this.labelOperations.Size = new System.Drawing.Size(110, 20);
+            this.labelOperations.Size = new System.Drawing.Size(125, 20);
             this.labelOperations.TabIndex = 10;
-            this.labelOperations.Text = "Operations (3)";
+            this.labelOperations.Text = "Operations (3, x)";
             // 
             // listBoxOperations
             // 
@@ -156,18 +160,18 @@
             this.listBoxOperations.ItemHeight = 20;
             this.listBoxOperations.Location = new System.Drawing.Point(796, 107);
             this.listBoxOperations.Name = "listBoxOperations";
-            this.listBoxOperations.Size = new System.Drawing.Size(106, 244);
+            this.listBoxOperations.Size = new System.Drawing.Size(124, 244);
             this.listBoxOperations.TabIndex = 9;
             // 
             // labelBrackets
             // 
             this.labelBrackets.AutoSize = true;
             this.labelBrackets.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelBrackets.Location = new System.Drawing.Point(904, 80);
+            this.labelBrackets.Location = new System.Drawing.Point(925, 63);
             this.labelBrackets.Name = "labelBrackets";
-            this.labelBrackets.Size = new System.Drawing.Size(95, 20);
+            this.labelBrackets.Size = new System.Drawing.Size(110, 20);
             this.labelBrackets.TabIndex = 12;
-            this.labelBrackets.Text = "Brackets (4)";
+            this.labelBrackets.Text = "Brackets (4, x)";
             // 
             // listBoxBrackets
             // 
@@ -175,9 +179,9 @@
             this.listBoxBrackets.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxBrackets.FormattingEnabled = true;
             this.listBoxBrackets.ItemHeight = 20;
-            this.listBoxBrackets.Location = new System.Drawing.Point(908, 107);
+            this.listBoxBrackets.Location = new System.Drawing.Point(926, 107);
             this.listBoxBrackets.Name = "listBoxBrackets";
-            this.listBoxBrackets.Size = new System.Drawing.Size(106, 244);
+            this.listBoxBrackets.Size = new System.Drawing.Size(124, 244);
             this.listBoxBrackets.TabIndex = 11;
             // 
             // labelError
@@ -191,11 +195,55 @@
             this.labelError.TabIndex = 13;
             this.labelError.Text = "Place for errors";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(536, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 20);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "x | value";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(928, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 20);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "x | value";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(798, 84);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 20);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "x | value";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(667, 84);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 20);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "x | value";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1030, 370);
+            this.ClientSize = new System.Drawing.Size(1070, 370);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.labelBrackets);
             this.Controls.Add(this.listBoxBrackets);
@@ -233,6 +281,10 @@
         private System.Windows.Forms.Label labelBrackets;
         private System.Windows.Forms.ListBox listBoxBrackets;
         private System.Windows.Forms.Label labelError;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

@@ -17,6 +17,11 @@ namespace KPZ_Lab2
         {
             InitializeComponent();
             labelError.Text = "";
+            textBoxExpression.Text = 
+@"if( a + (b / 4) >= c / 2)
+    r = 4 - a * b;
+else
+    r = (b + c) * (c + (d - 5) * 2);";
         }
 
         private void textBoxExpression_TextChanged(object sender, EventArgs e)
