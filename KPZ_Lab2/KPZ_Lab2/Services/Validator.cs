@@ -28,7 +28,7 @@ namespace KPZ_Lab2.Services
             string boolOperation = "==|<=|>=|>|<";
 
             string arithmeticalEx = string.Format(
-                @"[(]*\s*(({0})|({1}))\s*[)]*\s*(({2})\s*[(]*\s*(({0})|({1}))\s*[)]*)*",
+                @"[(]*\s*(({0})|({1}))\s*[)]*\s*(({2})\s*[(]*\s*(({0})|({1}))\s*[)]*\s*)*",
                 identifier, constant, operation);
 
             return Regex.IsMatch(expr, string.Format(
