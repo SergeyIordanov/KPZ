@@ -21,11 +21,10 @@ namespace KPZ_Lab2.Services
             }
             if (countOpened != 0) return false;
 
-            // Implementation
             string identifier = "[a-z]|[A-Z]";
             string constant = "[0-9]";
             string operation = "[+]|[-]|[/]|[*]";//"'+'|'-'|'*'|'/'";
-            string boolOperation = "==|<=|>=|>|<";
+            string boolOperation = "==|<=|>=|>|<|!=";
 
             string arithmeticalEx = string.Format(
                 @"[(]*\s*(({0})|({1}))\s*[)]*\s*(({2})\s*[(]*\s*(({0})|({1}))\s*[)]*\s*)*",

@@ -24,12 +24,12 @@ namespace KPZ_Lab2.Services
             int idCount, conCount, opCount, brCount;
             idCount = conCount = opCount = brCount = 1;
             expr = expr.Replace(" ", String.Empty);
-            expr = expr.Replace("if", "!");
+            expr = expr.Replace("if", "#");
             expr = expr.Replace("else", "^");
             for(int i = 0; i < expr.Length; i++)
             {
                 //Operations
-                if (Regex.IsMatch(expr[i].ToString(), string.Format(@"^[-]|[+]|[*]|[/]|[=]|[<]|[>]|[!]|['^']|[;]$"), RegexOptions.Compiled | RegexOptions.IgnoreCase))
+                if (Regex.IsMatch(expr[i].ToString(), string.Format(@"^[-]|[+]|[*]|[/]|[=]|[<]|[>]|[#]|[!]|['^']|[;]$"), RegexOptions.Compiled | RegexOptions.IgnoreCase))
                 {
                     bool isExist = false;
                     foreach (string item in op.Items)
@@ -41,11 +41,11 @@ namespace KPZ_Lab2.Services
                             break;
                         }
                     }
-                    if (expr[i] == '!' || expr[i] == '^')
+                    if (expr[i] == '#' || expr[i] == '^')
                     {
                         lexeme += "(3," + opCount + ")";
                         string s = "";
-                        if(expr[i] == '!')
+                        if(expr[i] == '#')
                             s += opCount + " | " + "if";
                         else
                             s += opCount + " | " + "else";
@@ -60,7 +60,7 @@ namespace KPZ_Lab2.Services
                         opCount++;
                         i++;
                     }
-                    else if ((expr[i] == '>' || expr[i] == '<') && expr[i + 1] == '=')
+                    else if ((expr[i] == '>' || expr[i] == '<' || expr[i] == '!') && expr[i + 1] == '=')
                     {
                         lexeme += "(3," + opCount + ")";
                         string s = opCount + " | " + expr[i].ToString() + "=";
