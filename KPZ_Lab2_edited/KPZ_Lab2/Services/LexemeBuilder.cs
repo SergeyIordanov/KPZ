@@ -33,7 +33,10 @@ namespace KPZ_Lab2.Services
             con.Items.Clear();
             op.Items.Clear();
             br.Items.Clear();
-
+            
+            expr = expr.Replace("else ", "&");
+            expr = expr.Replace("else\n", "&");
+            expr = expr.Replace("else\r", "&");
             expr = expr.Replace(" ", String.Empty);
             expr = expr.Replace("\r", String.Empty);
             expr = expr.Replace("\n", String.Empty);
@@ -115,11 +118,21 @@ namespace KPZ_Lab2.Services
                     }
                 }
             }
-            if (Regex.IsMatch(s, "^([+]|[=]|[-]|[/]|[*]|[>]|[<]|<=|>=|==|!=|[;]|if|else)$", RegexOptions.Compiled | RegexOptions.IgnoreCase))
+            if (Regex.IsMatch(s, "^([+]|[=]|[-]|[/]|[*]|[>]|[<]|<=|>=|==|!=|[;]|if|&)$", RegexOptions.Compiled | RegexOptions.IgnoreCase))
             {
                 bool isExist = false;
+
                 foreach (string item in op.Items)
                 {
+                    if(s.Equals("&"))
+                    {
+                        if (item.Split('|')[1].Trim().Equals("else"))
+                        {
+                            lexeme += "(3," + item.Split('|')[0].Trim() + ")";
+                            isExist = true;
+                            break;
+                        }
+                    }
                     if (item.Split('|')[1].Trim().Equals(s))
                     {
                         lexeme += "(3," + item.Split('|')[0].Trim() + ")";
@@ -129,10 +142,19 @@ namespace KPZ_Lab2.Services
                 }
                 if (!isExist)
                 {
-                    lexeme += "(3," + opCount + ")";
-                    string str = opCount + " | " + s;
-                    op.Items.Add(str);
-                    opCount++;
+                    if (s.Equals("&"))
+                    {
+                        lexeme += "(3," + opCount + ")";
+                        string str = opCount + " | " + "else";
+                        op.Items.Add(str);
+                        opCount++;
+                    }
+                    else {
+                        lexeme += "(3," + opCount + ")";
+                        string str = opCount + " | " + s;
+                        op.Items.Add(str);
+                        opCount++;
+                    }
                 }
             }
             if (Regex.IsMatch(s, String.Format("^({0}+|({0}+[.]{0}+))$", numbers), RegexOptions.Compiled | RegexOptions.IgnoreCase))
@@ -165,7 +187,7 @@ namespace KPZ_Lab2.Services
             {
                 return true;
             }
-            if (Regex.IsMatch(s, @"^([+]|[=]|[-]|[/]|[*]|[>]|[<]|<=|>=|==|!=|[;])$", RegexOptions.Compiled | RegexOptions.IgnoreCase))
+            if (Regex.IsMatch(s, @"^([+]|[=]|[-]|[/]|[*]|[>]|[<]|<=|>=|==|!=|[;]|[!])$", RegexOptions.Compiled | RegexOptions.IgnoreCase))
             {
                 return true;
             }
@@ -174,6 +196,10 @@ namespace KPZ_Lab2.Services
                 return true;
             }
             if (Regex.IsMatch(s, String.Format(@"^({0}+|({0}*[.]{0}*))$", numbers), RegexOptions.Compiled | RegexOptions.IgnoreCase))
+            {
+                return true;
+            }
+            if (Regex.IsMatch(s, String.Format("^[&]$"), RegexOptions.Compiled | RegexOptions.IgnoreCase))
             {
                 return true;
             }

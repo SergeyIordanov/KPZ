@@ -21,8 +21,8 @@ namespace KPZ_Lab2.Services
             }
             if (countOpened != 0) return false;
 
-            string identifier = "[a-z]|[A-Z]";
-            string constant = "[0-9]";
+            string identifier = "([a-z]|[A-Z]|[_])+([0-9]|[a-z]|[A-Z]|[_])*";
+            string constant = "[0-9]+|[0-9]+[.][0-9]+";
             string operation = "[+]|[-]|[/]|[*]";//"'+'|'-'|'*'|'/'";
             string boolOperation = "==|<=|>=|>|<|!=";
 
