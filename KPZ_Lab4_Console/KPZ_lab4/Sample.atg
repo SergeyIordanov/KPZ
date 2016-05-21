@@ -1,0 +1,24 @@
+﻿COMPILER Sample
+
+CHARACTERS
+	digit = '0'..'9'.
+	letter = 'a'..'z'.
+	bigletter = 'A'..'Z'.	
+TOKENS
+	ident = ( letter | bigletter | '_' ) { digit | letter | bigletter | '_' }.
+	const = digit { digit } | digit { digit} '.' digit { digit }.
+	bool = "==" | "<=" | ">=" | '>' | '<' | "!=".
+	operation = '+' | '-' | '/' | '*'.
+	if = "if".
+	else = "else".
+IGNORE '\t' + '\r' + '\n'
+PRODUCTIONS
+	Sample = if "(" X ")" ident "=" A ";" E.
+	X = A bool A.
+	E = [] | else ident "=" A ";".
+	A = V M W N.
+	V = [] | "(" V.
+	W = [] | ")" W.
+	M = ident | const.
+	N = [] | operation V M W N.
+END Sample.
