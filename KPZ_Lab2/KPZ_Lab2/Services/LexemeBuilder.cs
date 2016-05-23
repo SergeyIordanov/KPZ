@@ -16,7 +16,7 @@ namespace KPZ_Lab2.Services
             con.Items.Clear();
             op.Items.Clear();
             br.Items.Clear();
-
+            
             if (!Validator.Validate(expr))
                 return "Invalid exprassion";
          
